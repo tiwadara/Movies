@@ -6,14 +6,14 @@
 
 This is a test project using :
 
-Unit tests
-MVVM Architecture  ✓
-Clear and clean code  ✓
-Offline cache  ✓
-multi-module
-Kotlin  ✓
-Dependency Injection ✓
-CI  ✓
-Retrofit  ✓
-Room  ✓
+###### Unit tests
+###### MVVM Architecture  ✓
+###### Clear and clean code  ✓
+###### Offline cache  ✓
+###### multi-module
+###### Kotlin  ✓
+###### Dependency Injection ✓
+###### CI  ✓
+###### Retrofit  ✓
+###### Room  ✓
  
