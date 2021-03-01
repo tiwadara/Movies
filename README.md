@@ -1,7 +1,7 @@
 # Movie App
 
 
-<img src="/readme/1.png" width="200">
+<img src="/readme/app.png" width="200">
 
 
 This is a test project using :
