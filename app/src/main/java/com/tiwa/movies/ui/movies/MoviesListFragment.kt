@@ -8,8 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.tiwa.movies.R
-import com.tiwa.movies.data.model.Movie
-import com.tiwa.movies.data.viewmodel.MovieViewModel
+import com.tiwa.common.model.Movie
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_movie.*
 

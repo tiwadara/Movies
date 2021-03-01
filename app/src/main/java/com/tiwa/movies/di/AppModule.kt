@@ -2,11 +2,12 @@ package com.tiwa.movies.di
 
 import android.content.Context
 import androidx.room.Room
-import com.tiwa.movies.data.constant.Constants
-import com.tiwa.movies.data.dao.MovieDao
-import com.tiwa.movies.data.dao.MovieDatabase
-import com.tiwa.movies.data.repository.DefaultMovieRepository
-import com.tiwa.movies.data.service.MovieService
+import com.tiwa.common.constant.Constants
+import com.tiwa.common.constant.Constants.DATABASE_NAME
+import com.tiwa.common.dao.MovieDao
+import com.tiwa.common.dao.MovieDatabase
+import com.tiwa.common.repository.DefaultMovieRepository
+import com.tiwa.common.service.MovieService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -28,7 +29,7 @@ object AppModule {
             .databaseBuilder(
                 context,
                 MovieDatabase::class.java,
-                MovieDatabase.DATABASE_NAME)
+                DATABASE_NAME)
             .fallbackToDestructiveMigration()
             .build()
     }
@@ -41,16 +42,16 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideMovieRepository(
+    fun provideDefaultMovieRepository(
         movieDao: MovieDao,
         movieApi: MovieService,
     ): DefaultMovieRepository{
-        return DefaultMovieRepository(movieDao,movieApi)
+        return DefaultMovieRepository(movieDao, movieApi)
     }
 
     @Singleton
     @Provides
-    fun provideMovieApi(): MovieService {
+    fun provideMovieService(): MovieService {
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl(Constants.BASE_URL)

@@ -2,7 +2,7 @@ package com.tiwa.movies.ui.movies
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.tiwa.movies.data.model.Movie
+import com.tiwa.common.model.Movie
 import kotlinx.android.synthetic.main.list_item_movies.view.*
 
 open class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){

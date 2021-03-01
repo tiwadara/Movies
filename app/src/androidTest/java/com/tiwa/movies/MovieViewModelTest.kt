@@ -3,9 +3,9 @@ package com.tiwa.movies
 import androidx.lifecycle.LiveData
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
-import com.tiwa.movies.data.dao.MovieDao
-import com.tiwa.movies.data.dao.MovieDatabase
-import com.tiwa.movies.data.model.Movie
+import com.tiwa.common.dao.MovieDao
+import com.tiwa.common.dao.MovieDatabase
+import com.tiwa.common.model.Movie
 import org.junit.Before
 import org.junit.Test
 
@@ -22,7 +22,6 @@ class MovieViewModelTest {
             MovieDatabase::class.java
         ).allowMainThreadQueries().build()
         dao = database.movieDao()
-
 
     }
 
@@ -57,13 +56,5 @@ class MovieViewModelTest {
 //
 //        val testResult = mLoginActivityViewModel.mAllPeopleResponse.value as LiveDataWrapper<AllPeople>
 //        assertEquals(testResult.response!!.next,mNextValue)
-    }
-
-    @Test
-    fun getSelectedPoi() {
-    }
-
-    @Test
-    fun setSelected() {
     }
 }

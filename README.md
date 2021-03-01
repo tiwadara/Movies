@@ -10,10 +10,10 @@ This is a test project using :
 ###### MVVM Architecture  ✓
 ###### Clear and clean code  ✓
 ###### Offline cache  ✓
-###### multi-module
+###### multi-module ✓
 ###### Kotlin  ✓
-###### Dependency Injection ✓
-###### CI  ✓
-###### Retrofit  ✓
+###### Dependency Injection using Hilt ✓
+###### CI  with Github ✓
+###### Retrofit ✓
 ###### Room  ✓
  

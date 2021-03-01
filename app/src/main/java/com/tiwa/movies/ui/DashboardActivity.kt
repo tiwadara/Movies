@@ -8,7 +8,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.tiwa.movies.R
-import com.tiwa.movies.data.viewmodel.MovieViewModel
+import com.tiwa.movies.ui.movies.MovieViewModel
 import com.tiwa.movies.ui.movies.MoviesListFragment
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_dashboard.*
