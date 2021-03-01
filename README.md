@@ -1,7 +1,7 @@
-# Taxi
+# Movie App
 
 
-<img src="/readme/1.png" width="400">
+<img src="/readme/1.png" width="200">
 
 
 This is a test project using :
