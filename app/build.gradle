@@ -17,6 +17,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -44,15 +45,6 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.room:room-runtime:2.2.6'
 
-    // Testing
-
-    testImplementation 'junit:junit:4.13.2'
-    testImplementation 'androidx.test:core:1.3.0'
-    testImplementation "org.mockito:mockito-core:3.3.3"
-    testImplementation 'io.mockk:mockk:1.10.6'
-    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.4'
-    testImplementation "com.squareup.okhttp3:mockwebserver:3.11.0"
-
 
     // android Test
     androidTestImplementation 'androidx.test:core:1.3.0'
@@ -70,13 +62,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.3.0'
     androidTestImplementation 'androidx.test.espresso.idling:idling-concurrent:3.3.0'
-    androidTestImplementation "com.squareup.okhttp3:mockwebserver:3.11.0"
-    androidTestImplementation 'androidx.test:runner:1.3.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    androidTestImplementation "com.squareup.okhttp3:mockwebserver:3.11.0"
 
     // Dependency Injection
-
     implementation "com.google.dagger:hilt-android:$hilt_version"
     annotationProcessor 'androidx.room:room-compiler:2.2.6'
     kapt "com.google.dagger:hilt-compiler:$hilt_version"
