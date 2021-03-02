@@ -14,7 +14,7 @@ This is a test project using :
 ###### multi-module  ( App & Common ) ✓
 ###### Kotlin  ✓
 ###### Dependency Injection using Hilt ✓
-###### CI  with Github ✓
+###### CI  with Github Actions ✓
 ###### Retrofit ✓
 ###### Room  ✓
  

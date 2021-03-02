@@ -6,7 +6,7 @@ import com.tiwa.common.constant.Constants
 import com.tiwa.common.constant.Constants.DATABASE_NAME
 import com.tiwa.common.dao.MovieDao
 import com.tiwa.common.dao.MovieDatabase
-import com.tiwa.common.repository.DefaultMovieRepository
+import com.tiwa.common.repository.MovieRepositoryImpl
 import com.tiwa.common.service.MovieService
 import dagger.Module
 import dagger.Provides
@@ -45,8 +45,8 @@ object AppModule {
     fun provideDefaultMovieRepository(
         movieDao: MovieDao,
         movieApi: MovieService,
-    ): DefaultMovieRepository{
-        return DefaultMovieRepository(movieDao, movieApi)
+    ): MovieRepositoryImpl{
+        return MovieRepositoryImpl(movieDao, movieApi)
     }
 
     @Singleton

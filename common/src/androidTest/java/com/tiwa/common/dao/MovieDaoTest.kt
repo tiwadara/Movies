@@ -10,6 +10,7 @@ import com.tiwa.common.getOrAwaitValue
 import com.tiwa.common.model.Movie
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
+import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -21,20 +22,25 @@ import org.junit.runner.RunWith
 class MovieDaoTest {
 
     @get:Rule
-    var instantTasExecutorRule = InstantTaskExecutorRule()
+    var instantTaskExecutorRule = InstantTaskExecutorRule()
 
-    private lateinit var database: MovieDatabase
+    private lateinit var movieDatabase: MovieDatabase
     private lateinit var movieDao: MovieDao
 
 
 
     @Before
     fun setup() {
-        database = Room.inMemoryDatabaseBuilder(
+        movieDatabase = Room.inMemoryDatabaseBuilder(
             ApplicationProvider.getApplicationContext(),
             MovieDatabase::class.java
         ).allowMainThreadQueries().build()
-        movieDao = database.movieDao()
+        movieDao = movieDatabase.movieDao()
+    }
+
+    @After
+    fun teardown() {
+        movieDatabase.close()
     }
 
     @Test
