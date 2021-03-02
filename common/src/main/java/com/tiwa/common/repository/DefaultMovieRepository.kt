@@ -1,10 +1,8 @@
 package com.tiwa.common.repository
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.tiwa.common.dao.MovieDao
-import com.tiwa.common.dao.MovieDatabase
 import com.tiwa.common.model.ApiResponse
 import com.tiwa.common.model.Movie
 import com.tiwa.common.service.MovieService

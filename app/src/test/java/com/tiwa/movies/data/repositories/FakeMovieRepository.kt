@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import com.tiwa.common.model.ApiResponse
 import com.tiwa.common.model.Dates
 import com.tiwa.common.model.Movie
-import com.tiwa.data.api.repository.MovieRepository
+import com.tiwa.common.repository.MovieRepository
 import com.tiwa.common.util.ResponseWrapper
 
 class FakeMovieRepository : MovieRepository {

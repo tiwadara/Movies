@@ -7,7 +7,7 @@ import com.tiwa.movies.R
 import com.tiwa.common.model.Movie
 
 
-class MovieAdapter(private val movieList: List<Movie>, ) : RecyclerView.Adapter<MovieViewHolder>() {
+class MovieAdapter(private val movieList: List<Movie>) : RecyclerView.Adapter<MovieViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_item_movies, parent, false)
