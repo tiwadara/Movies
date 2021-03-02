@@ -1,5 +1,6 @@
 # Movie App
 
+![Andoid CI](https://github.com/tiwadara/Movies/workflows/Android%20CI/badge.svg)
 
 <img src="/readme/app.png" width="200">
 
