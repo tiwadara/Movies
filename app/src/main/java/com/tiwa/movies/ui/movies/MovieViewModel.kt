@@ -11,9 +11,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class MovieViewModel @Inject constructor(
-    private val repository: DefaultMovieRepository
-): ViewModel() {
+class MovieViewModel @Inject constructor( private val repository: DefaultMovieRepository): ViewModel() {
 
     private var movieList: LiveData<List<Movie>> = repository.getMovieList()
     private var isLoading: LiveData<Boolean> = repository.isLoading()

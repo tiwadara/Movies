@@ -2,6 +2,8 @@ package com.tiwa.common.repository
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.tiwa.common.constant.Constants.ERROR_MESSAGE
+import com.tiwa.common.constant.Constants.NO_INTERNET_ERROR
 import com.tiwa.common.dao.MovieDao
 import com.tiwa.common.model.ApiResponse
 import com.tiwa.common.model.Movie
@@ -40,13 +42,14 @@ class DefaultMovieRepository @Inject constructor(
             if(response.isSuccessful) {
                 response.body()?.let {
                     return@let  ResponseWrapper.success(it)
-                } ?: ResponseWrapper.error("An unknown error occured", null)
+                } ?: ResponseWrapper.error(ERROR_MESSAGE, null)
             } else {
-                ResponseWrapper.error("An unknown error occured", null)
+                loaded()
+                ResponseWrapper.error(ERROR_MESSAGE, null)
             }
         } catch(e: Exception) {
             loaded()
-            ResponseWrapper.error("Couldn't reach the server. Check your internet connection", null)
+            ResponseWrapper.error(NO_INTERNET_ERROR, null)
         }
     }
 

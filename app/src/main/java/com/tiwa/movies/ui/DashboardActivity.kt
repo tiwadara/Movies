@@ -29,8 +29,7 @@ class DashboardActivity : AppCompatActivity() {
     }
 
     private fun loadFragment() {
-        val fragment: Fragment
-        fragment = MoviesListFragment()
+        val fragment: Fragment = MoviesListFragment()
         val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.main_content, fragment)
         transaction.commit()

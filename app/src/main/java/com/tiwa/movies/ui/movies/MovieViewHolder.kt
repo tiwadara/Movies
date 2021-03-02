@@ -11,7 +11,6 @@ open class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         itemView.textViewFleetType.text = movie.title
         itemView.textViewVehicleLocation.text = movie.overview
         itemView.textViewPoiNumber.text = movie.id.toString()
-
     }
 
 }

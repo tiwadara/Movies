@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.tiwa.movies.R
 import com.tiwa.common.model.Movie
+import com.tiwa.movies.R
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_movie.*
 
@@ -18,8 +18,7 @@ class MoviesListFragment : Fragment() {
     private val viewModel: MovieViewModel by viewModels()
     private lateinit var adapter: MovieAdapter
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?,
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?, ): View? {
         return inflater.inflate(R.layout.fragment_movie, container, false)
     }
 
