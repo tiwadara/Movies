@@ -6,11 +6,11 @@
 
 This is a test project using :
 
-###### Unit tests
+###### Unit tests ✓
 ###### MVVM Architecture  ✓
 ###### Clear and clean code  ✓
 ###### Offline cache  ✓
-###### multi-module ✓
+###### multi-module  ( App & Common ) ✓
 ###### Kotlin  ✓
 ###### Dependency Injection using Hilt ✓
 ###### CI  with Github ✓
