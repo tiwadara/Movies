@@ -38,7 +38,7 @@
                 card_view:layout_constraintTop_toTopOf="@+id/imageViewFleetType" />
 
             <TextView
-                android:id="@+id/textViewVehicleLocation"
+                android:id="@+id/textViewOverview"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"

@@ -7,10 +7,13 @@ import kotlinx.android.synthetic.main.list_item_movies.view.*
 
 open class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
-    fun bindItems(movie: Movie) {
+    fun bindItems(movie: Movie, movieViewModel: MovieViewModel) {
         itemView.textViewFleetType.text = movie.title
-        itemView.textViewVehicleLocation.text = movie.overview
+        itemView.textViewOverview.text = movie.overview
         itemView.textViewPoiNumber.text = movie.id.toString()
+        itemView.rootView.setOnClickListener {
+            movieViewModel.loadMovie(movie.id)
+        }
     }
 
 }

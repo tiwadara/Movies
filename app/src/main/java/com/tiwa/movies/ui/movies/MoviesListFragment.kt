@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.tiwa.common.model.Movie
 import com.tiwa.movies.R
@@ -30,7 +32,7 @@ class MoviesListFragment : Fragment() {
 
     private fun prepareViewElements() {
         moviesRecyclerView.layoutManager = LinearLayoutManager(context)
-        adapter = MovieAdapter(arrayListOf())
+        adapter = MovieAdapter(arrayListOf(), viewModel)
         moviesRecyclerView.adapter = adapter
     }
 
@@ -40,10 +42,22 @@ class MoviesListFragment : Fragment() {
                 populateView(movies)
             }
         })
+        viewModel.movieItemClicked() .observe(viewLifecycleOwner, { movieId ->
+            if (movieId != viewModel.initialMovieId) {
+                navigate(movieId)
+                viewModel.setItemClicked()
+            }
+        })
+    }
+
+    private fun navigate(movieId: Int) {
+        val action = MoviesListFragmentDirections.actionMoviesListFragmentToMovieDetailFragment(movieId)
+        view?.findNavController()?.navigate(action)
+
     }
 
     private fun populateView(movies: List<Movie>) {
-        adapter = MovieAdapter(movies)
+        adapter = MovieAdapter(movies, viewModel)
         moviesRecyclerView.adapter = adapter
     }
 }
