@@ -1,5 +1,6 @@
 package com.tiwa.common.repository
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.tiwa.common.constant.Constants.ERROR_MESSAGE
@@ -18,6 +19,7 @@ class MovieRepositoryImpl @Inject constructor(
 
     private var isLoading = MutableLiveData<Boolean>()
     private lateinit var  movieList: LiveData<List<Movie>>
+    private lateinit var  movie: LiveData<Movie>
 
     init {
         loadCachedMovieList()
@@ -33,6 +35,15 @@ class MovieRepositoryImpl @Inject constructor(
 
     override fun getMovieList(): LiveData<List<Movie>> {
         return movieList
+    }
+
+    override fun getMovie(movieId: Int): LiveData<Movie> {
+        movie =  movieDao.getMovie(movieId)
+        return movie
+    }
+
+    override fun getMovie(): LiveData<Movie> {
+        return movie
     }
 
     override  suspend fun loadMovies(): ResponseWrapper<ApiResponse> {

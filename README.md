@@ -17,4 +17,5 @@ This is a test project using :
 ###### CI  with Github Actions ✓
 ###### Retrofit ✓
 ###### Room  ✓
+###### Navigation Component  ✓
  

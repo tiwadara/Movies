@@ -12,4 +12,6 @@ interface MovieRepository {
     suspend fun saveNewMovies(movies: List<Movie>?)
     fun getMovieList(): LiveData<List<Movie>>
     fun stopLoading()
+    fun getMovie(movieId: Int): LiveData<Movie>
+    fun getMovie(): LiveData<Movie>
 }

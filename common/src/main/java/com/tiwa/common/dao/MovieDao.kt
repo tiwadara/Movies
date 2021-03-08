@@ -19,5 +19,8 @@ interface MovieDao {
     @Query("SELECT * FROM $MOVIE_TABLE")
     fun getAllMovies(): LiveData<List<Movie>>
 
+    @Query("SELECT * FROM $MOVIE_TABLE WHERE id=:movieId ")
+    fun getMovie(movieId:Int): LiveData<Movie>
+
 
 }
